@@ -1,0 +1,155 @@
+/* Contenedor principal del header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #191d33;         /* mismo fondo del proyecto */
+  color: #ffffff;
+  border-bottom: 3px solid #0f1428;
+}
+
+/* Marca (logo tipográfico) */
+.brand {
+  font-family: 'Chiron GoRound TC', sans-serif; /* tu fuente */
+  line-height: 1;
+}
+
+.brand-white {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.2px;
+}
+
+.brand-accent {
+  color: #a89de1;              /* acento */
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.2px;
+}
+
+/* Botonera derecha */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---- Estilos PrimeNG para los botones del header ---- */
+::ng-deep .white-btn.p-button {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding: 0.6rem 0.9rem !important;
+  border-radius: 10px !important;
+}
+::ng-deep .white-btn.p-button:hover {
+  color: #a89de1 !important;
+  background: rgba(168, 157, 225, 0.12) !important;
+}
+
+::ng-deep .cta-btn.p-button {
+  background: transparent !important;
+  color: #a89de1 !important;
+  border: 1px solid #a89de1 !important;
+  padding: 0.6rem 0.95rem !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+::ng-deep .cta-btn.p-button:hover {
+  background: #a89de1 !important;
+  color: #191d33 !important;
+  border-color: #a89de1 !important;
+}
+
+/* Responsivo básico */
+@media (max-width: 960px) {
+  .header-container { padding: 10px 16px; gap: 12px; }
+  .brand-white, .brand-accent { font-size: 1.25rem; }
+  .actions { gap: 6px; }
+}
+
+/* ===== Espaciado entre el botón headless y el logo ===== */
+.brand-text {
+  display: inline-flex;
+  align-items: baseline;
+  margin-left: 12px;
+}
+:host ::ng-deep .menu-btn.p-button {
+  margin-right: 4px;
+}
+
+/* ================= Drawer (headless) ================= */
+
+/* Fondo y altura completa del panel interno del Drawer */
+:host ::ng-deep .p-drawer-content {
+  background: linear-gradient(to bottom right, #191D33, #23256F) !important;
+  height: 100vh !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Nuestro wrapper interno (respaldo y consistencia) */
+.drawer-container {
+  background: linear-gradient(to bottom right, #191D33, #23256F);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado del drawer */
+.drawer-head {
+  position: relative;
+  height: 56px;
+  padding: 8px 12px;
+  background: transparent;           /* usa el degradado del contenedor */
+  border-bottom: 1px solid rgba(42, 47, 77, 0.8);
+}
+
+/* Logo centrado (absoluto, robusto) */
+.drawer-brand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Wrapper del botón cerrar, pegado a la derecha */
+.drawer-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Botón cerrar (X): tamaño y color */
+:host ::ng-deep .drawer-close-btn.p-button {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  min-width: 1.25rem !important;
+  min-height: 1.25rem !important;
+
+  background-color: #9294DC !important;
+  border: none !important;
+  color: #fff !important;
+  padding: 0 !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+}
+
+/* Icono de la X en blanco */
+:host ::ng-deep .drawer-close-btn .p-button-icon {
+  color: #fff !important;
+}
+
+/* Cuerpo del drawer: hereda degradado y ocupa el resto */
+.drawer-body {
+  background: transparent;
+  flex: 1 1 auto;
+  min-height: 0;
+}

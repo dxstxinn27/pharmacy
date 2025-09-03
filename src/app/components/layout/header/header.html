@@ -1,0 +1,78 @@
+<div class="header-container">
+  <!-- Marca + botón hamburguesa (solo móvil) -->
+  <div class="brand flex items-center">
+    <p-button
+      (click)="drawerVisible = true"
+      icon="pi pi-bars"
+      [style]="{ backgroundColor: '#9294DC', border: 'none', color: '#fff' }"
+      styleClass="menu-btn md:mr-3"
+      ariaLabel="Abrir menú"
+    >
+    </p-button>
+
+    <!-- contenedor del texto del logo para espaciarlo del botón -->
+    <div class="brand-text">
+      <span class="brand-white">BlueCare</span><span class="brand-accent">Pharmacy</span>
+    </div>
+  </div>
+
+  <!-- Botones de navegación a la derecha -->
+  <div class="actions">
+    <p-button
+      *ngFor="let item of navItems"
+      [label]="item.label"
+      [routerLink]="item.routerLink"
+      [styleClass]="item.styleClass"
+    >
+    </p-button>
+  </div>
+</div>
+
+<!-- Drawer headless (móvil) -->
+<p-drawer
+  #drawerRef
+  [(visible)]="drawerVisible"
+  [modal]="true"
+  [dismissible]="true"
+  [position]="'left'"
+  [showCloseIcon]="false"
+  [blockScroll]="true"
+  [baseZIndex]="1000"
+>
+  <ng-template #headless>
+    <!-- Alto exacto de la ventana + fondo -->
+    <div class="drawer-container" style="height: 100vh">
+      <!-- ENCABEZADO -->
+      <div class="drawer-head relative h-14 border-b">
+        <div class="drawer-brand">
+          <span class="brand-white">BlueCare</span>
+          <span class="brand-accent">Pharmacy</span>
+        </div>
+        <div class="drawer-close">
+          <p-button
+            type="button"
+            (click)="closeCallback($event)"
+            icon="pi pi-times"
+            rounded="true"
+            [style]="{
+              backgroundColor: '#9294DC',
+              border: 'none',
+              color: '#fff',
+              width: '1.25rem',
+              height: '1.25rem',
+              minWidth: '1.25rem',
+              minHeight: '1.25rem',
+              padding: '0'
+            }"
+          >
+          </p-button>
+        </div>
+      </div>
+
+      <!-- CONTENIDO -->
+      <div class="drawer-body overflow-y-auto px-2 pb-3">
+        <app-aside></app-aside>
+      </div>
+    </div>
+  </ng-template>
+</p-drawer>

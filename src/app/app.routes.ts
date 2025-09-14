@@ -1,149 +1,137 @@
 import { Routes } from '@angular/router';
+// Medications
+import { ShowMedications } from './components/catalog/medications/show-medications/show-medications';
+import { CreateMedications } from './components/catalog/medications/create-medications/create-medications';
+import { UpdateMedications } from './components/catalog/medications/update-medications/update-medications';
+
+// Categories
+import { ShowCategories } from './components/catalog/categories/show-categories/show-categories';
+import { CreateCategories } from './components/catalog/categories/create-categories/create-categories';
+import { UpdateCategories } from './components/catalog/categories/update-categories/update-categories';
+
+// Lots
+import { ShowLots } from './components/catalog/lots/show-lots/show-lots';
+import { CreateLots } from './components/catalog/lots/create-lots/create-lots';
+import { UpdateLots } from './components/catalog/lots/update-lots/update-lots';
+
+// Providers
+import { ShowProviders } from './components/catalog/providerss/show-providers/show-providers';
+import { CreateProviders } from './components/catalog/providerss/create-providers/create-providers';
+import { UpdateProviders } from './components/catalog/providerss/update-providers/update-providers';
+
+// Customers
+import { ShowCustomers } from './components/customers/list/show-customers/show-customers';
+import { CreateCustomers } from './components/customers/list/create-customers/create-customers';
+import { UpdateCustomers } from './components/customers/list/update-customers/update-customers';
+
+// Recipes
+import { ShowRecipes } from './components/customers/recipes/show-recipes/show-recipes';
+import { CreateRecipes } from './components/customers/recipes/create-recipes/create-recipes';
+import { UpdateRecipes } from './components/customers/recipes/update-recipes/update-recipes';
+
+// Sales
+import { ShowSales } from './components/sales/new/show-sales/show-sales';
+import { CreateSales } from './components/sales/new/create-sales/create-sales';
+import { UpdateSales } from './components/sales/new/update-sales/update-sales';
+
+// Sales Detail
+import { ShowSalesDetail } from './components/sales/detail/show-sales-detail/show-sales-detail';
+import { CreateSalesDetail } from './components/sales/detail/create-sales-detail/create-sales-detail';
+import { UpdateSalesDetail } from './components/sales/detail/update-sales-detail/update-sales-detail';
+
+// Payments
+import { ShowPayments } from './components/payments/show-payments/show-payments';
+import { CreatePayments } from './components/payments/create-payments/create-payments';
+import { UpdatePayments } from './components/payments/update-payments/update-payments';
+
+// Taxes
+import { ShowTaxes } from './components/taxes/show-taxes/show-taxes';
+import { CreateTaxes } from './components/taxes/create-taxes/create-taxes';
+import { UpdateTaxes } from './components/taxes/update-taxes/update-taxes';
+
+// Inventory Reports
+import { ShowInventory } from './components/reports/inventory/show-inventory/show-inventory';
+import { CreateInventory } from './components/reports/inventory/create-inventory/create-inventory';
+import { UpdateInventory } from './components/reports/inventory/update-inventory/update-inventory';
+
+// Expirations Reports
+import { ShowExpirations } from './components/reports/expirations/show-expirations/show-expirations';
+import { CreateExpirations } from './components/reports/expirations/create-expirations/create-expirations';
+import { UpdateExpirations } from './components/reports/expirations/update-expirations/update-expirations';
+
+// Sales Summary Reports
+import { ShowSalesSummary } from './components/reports/salesSummary/show-sales-summary/show-sales-summary';
+import { CreateSalesSummary } from './components/reports/salesSummary/create-sales-summary/create-sales-summary';
+import { UpdateSalesSummary } from './components/reports/salesSummary/update-sales-summary/update-sales-summary';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'medications', pathMatch: 'full' },
+
   // Medications
-  { path: 'medications/show', loadComponent: () =>
-      import('./components/catalog/medications/show-medications/show-medications')
-        .then(m => m.ShowMedications) },
-  { path: 'medications/create', loadComponent: () =>
-      import('./components/catalog/medications/create-medications/create-medications')
-        .then(m => m.CreateMedications) },
-  { path: 'medications/update', loadComponent: () =>
-      import('./components/catalog/medications/update-medications/update-medications')
-        .then(m => m.UpdateMedications) },
+  { path: 'medications', component: ShowMedications },
+  { path: 'medications/create', component: CreateMedications },
+  { path: 'medications/update', component: UpdateMedications },
 
   // Categories
-  { path: 'categories/show', loadComponent: () =>
-      import('./components/catalog/categories/show-categories/show-categories')
-        .then(m => m.ShowCategories) },
-  { path: 'categories/create', loadComponent: () =>
-      import('./components/catalog/categories/create-categories/create-categories')
-        .then(m => m.CreateCategories) },
-  { path: 'categories/update', loadComponent: () =>
-      import('./components/catalog/categories/update-categories/update-categories')
-        .then(m => m.UpdateCategories) },
+  { path: 'categories', component: ShowCategories },
+  { path: 'categories/create', component: CreateCategories },
+  { path: 'categories/update', component: UpdateCategories },
 
   // Lots
-  { path: 'lots/show', loadComponent: () =>
-      import('./components/catalog/lots/show-lots/show-lots')
-        .then(m => m.ShowLots) },
-  { path: 'lots/create', loadComponent: () =>
-      import('./components/catalog/lots/create-lots/create-lots')
-        .then(m => m.CreateLots) },
-  { path: 'lots/update', loadComponent: () =>
-      import('./components/catalog/lots/update-lots/update-lots')
-        .then(m => m.UpdateLots) },
+  { path: 'lots', component: ShowLots },
+  { path: 'lots/create', component: CreateLots },
+  { path: 'lots/update', component: UpdateLots },
 
   // Providers
-  { path: 'providers/show', loadComponent: () =>
-      import('./components/catalog/providers/show-providers/show-providers')
-        .then(m => m.ShowProviders) },
-  { path: 'providers/create', loadComponent: () =>
-      import('./components/catalog/providers/create-providers/create-providers')
-        .then(m => m.CreateProviders) },
-  { path: 'providers/update', loadComponent: () =>
-      import('./components/catalog/providers/update-providers/update-providers')
-        .then(m => m.UpdateProviders) },
+  { path: 'providers', component: ShowProviders },
+  { path: 'providers/create', component: CreateProviders },
+  { path: 'providers/update', component: UpdateProviders },
 
   // Customers
-  { path: 'customers/show', loadComponent: () =>
-      import('./components/customers/list/show-customers/show-customers')
-        .then(m => m.ShowCustomers) },
-  { path: 'customers/create', loadComponent: () =>
-      import('./components/customers/list/create-customers/create-customers')
-        .then(m => m.CreateCustomers) },
-  { path: 'customers/update', loadComponent: () =>
-      import('./components/customers/list/update-customers/update-customers')
-        .then(m => m.UpdateCustomers) },
+  { path: 'customers', component: ShowCustomers },
+  { path: 'customers/create', component: CreateCustomers },
+  { path: 'customers/update', component: UpdateCustomers },
 
   // Recipes
-  { path: 'recipes/show', loadComponent: () =>
-      import('./components/customers/recipes/show-recipes/show-recipes')
-        .then(m => m.ShowRecipes) },
-  { path: 'recipes/create', loadComponent: () =>
-      import('./components/customers/recipes/create-recipes/create-recipes')
-        .then(m => m.CreateRecipes) },
-  { path: 'recipes/update', loadComponent: () =>
-      import('./components/customers/recipes/update-recipes/update-recipes')
-        .then(m => m.UpdateRecipes) },
+  { path: 'recipes', component: ShowRecipes },
+  { path: 'recipes/create', component: CreateRecipes },
+  { path: 'recipes/update', component: UpdateRecipes },
 
   // Sales
-  { path: 'sales/show', loadComponent: () =>
-      import('./components/sales/new/show-sales/show-sales')
-        .then(m => m.ShowSales) },
-  { path: 'sales/create', loadComponent: () =>
-      import('./components/sales/new/create-sales/create-sales')
-        .then(m => m.CreateSales) },
-  { path: 'sales/update', loadComponent: () =>
-      import('./components/sales/new/update-sales/update-sales')
-        .then(m => m.UpdateSales) },
+  { path: 'sales', component: ShowSales },
+  { path: 'sales/create', component: CreateSales },
+  { path: 'sales/update', component: UpdateSales },
 
   // Sales Detail
-  { path: 'sales-detail/show', loadComponent: () =>
-      import('./components/sales/detail/show-sales-detail/show-sales-detail')
-        .then(m => m.ShowSalesDetail) },
-  { path: 'sales-detail/create', loadComponent: () =>
-      import('./components/sales/detail/create-sales-detail/create-sales-detail')
-        .then(m => m.CreateSalesDetail) },
-  { path: 'sales-detail/update', loadComponent: () =>
-      import('./components/sales/detail/update-sales-detail/update-sales-detail')
-        .then(m => m.UpdateSalesDetail) },
+  { path: 'sales-detail', component: ShowSalesDetail },
+  { path: 'sales-detail/create', component: CreateSalesDetail },
+  { path: 'sales-detail/update', component: UpdateSalesDetail },
 
   // Payments
-  { path: 'payments/show', loadComponent: () =>
-      import('./components/payments/show-payments/show-payments')
-        .then(m => m.ShowPayments) },
-  { path: 'payments/create', loadComponent: () =>
-      import('./components/payments/create-payments/create-payments')
-        .then(m => m.CreatePayments) },
-  { path: 'payments/update', loadComponent: () =>
-      import('./components/payments/update-payments/update-payments')
-        .then(m => m.UpdatePayments) },
+  { path: 'payments', component: ShowPayments },
+  { path: 'payments/create', component: CreatePayments },
+  { path: 'payments/update', component: UpdatePayments },
 
   // Taxes
-  { path: 'taxes/show', loadComponent: () =>
-      import('./components/taxes/show-taxes/show-taxes')
-        .then(m => m.ShowTaxes) },
-  { path: 'taxes/create', loadComponent: () =>
-      import('./components/taxes/create-taxes/create-taxes')
-        .then(m => m.CreateTaxes) },
-  { path: 'taxes/update', loadComponent: () =>
-      import('./components/taxes/update-taxes/update-taxes')
-        .then(m => m.UpdateTaxes) },
+  { path: 'taxes', component: ShowTaxes },
+  { path: 'taxes/create', component: CreateTaxes },
+  { path: 'taxes/update', component: UpdateTaxes },
 
   // Inventory Reports
-  { path: 'inventory/show', loadComponent: () =>
-      import('./components/reports/inventory/show-inventory/show-inventory')
-        .then(m => m.ShowInventory) },
-  { path: 'inventory/create', loadComponent: () =>
-      import('./components/reports/inventory/create-inventory/create-inventory')
-        .then(m => m.CreateInventory) },
-  { path: 'inventory/update', loadComponent: () =>
-      import('./components/reports/inventory/update-inventory/update-inventory')
-        .then(m => m.UpdateInventory) },
+  { path: 'inventory', component: ShowInventory },
+  { path: 'inventory/create', component: CreateInventory },
+  { path: 'inventory/update', component: UpdateInventory },
 
   // Expirations Reports
-  { path: 'expirations/show', loadComponent: () =>
-      import('./components/reports/expirations/show-expirations/show-expirations')
-        .then(m => m.ShowExpirations) },
-  { path: 'expirations/create', loadComponent: () =>
-      import('./components/reports/expirations/create-expirations/create-expirations')
-        .then(m => m.CreateExpirations) },
-  { path: 'expirations/update', loadComponent: () =>
-      import('./components/reports/expirations/update-expirations/update-expirations')
-        .then(m => m.UpdateExpirations) },
+  { path: 'expirations', component: ShowExpirations },
+  { path: 'expirations/create', component: CreateExpirations },
+  { path: 'expirations/update', component: UpdateExpirations },
 
   // Sales Summary Reports
-  { path: 'sales-summary/show', loadComponent: () =>
-      import('./components/reports/salesSummary/show-sales-summary/show-sales-summary')
-        .then(m => m.ShowSalesSummary) },
-  { path: 'sales-summary/create', loadComponent: () =>
-      import('./components/reports/salesSummary/create-sales-summary/create-sales-summary')
-        .then(m => m.CreateSalesSummary) },
-  { path: 'sales-summary/update', loadComponent: () =>
-      import('./components/reports/salesSummary/update-sales-summary/update-sales-summary')
-        .then(m => m.UpdateSalesSummary) },
+  { path: 'sales-summary', component: ShowSalesSummary },
+  { path: 'sales-summary/create', component: CreateSalesSummary },
+  { path: 'sales-summary/update', component: UpdateSalesSummary },
 
   // Fallback
-  { path: '**', redirectTo: 'medications/show' }
+  { path: '**', redirectTo: 'medications' }
 ];

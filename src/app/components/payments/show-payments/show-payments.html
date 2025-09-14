@@ -1,1 +1,41 @@
-<p>show-payments works!</p>
+<div class="shadow-lg rounded-2xl bg-white p-8">
+  <!-- Encabezado -->
+  <h2 class="text-2xl font-bold text-gray-700 mb-6">Pagos</h2>
+
+  <!-- Botón crear -->
+  <div class="flex justify-end mb-4">
+    <button
+      pButton
+      type="button"
+      class="p-button p-component bg-primary text-white rounded-lg shadow-md hover:opacity-90"
+      icon="pi pi-plus"
+      label="Nuevo Pago"
+      [routerLink]="['/payments/create']">
+    </button>
+  </div>
+
+  <!-- Tabla -->
+  <p-table [value]="payments" stripedRows [tableStyle]="{'min-width': '60rem'}">
+    <ng-template #header>
+      <tr class="bg-gray-100">
+        <th class="px-4 py-2 text-left">Id</th>
+        <th class="px-4 py-2 text-left">Sale</th>
+        <th class="px-4 py-2 text-left">Customer</th>
+        <th class="px-4 py-2 text-left">Amount</th>
+        <th class="px-4 py-2 text-left">Date</th>
+        <th class="px-4 py-2 text-left">Method</th>
+      </tr>
+    </ng-template>
+
+    <ng-template #body let-p>
+      <tr class="border-b hover:bg-gray-50">
+        <td class="px-4 py-2">{{ p.id }}</td>
+        <td class="px-4 py-2">#{{ p.saleId }}</td>
+        <td class="px-4 py-2">{{ customerNameBySaleId(p.saleId) }}</td>
+        <td class="px-4 py-2">{{ p.amount | currency:'COP':'symbol-narrow':'1.0-0' }}</td>
+        <td class="px-4 py-2">{{ p.paymentDate | date:'yyyy-MM-dd HH:mm' }}</td>
+        <td class="px-4 py-2">{{ p.method }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

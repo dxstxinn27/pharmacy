@@ -1,1 +1,74 @@
-<p>footer works!</p>
+<footer class="footer-gradient text-slate-200">
+  <!-- Contenido principal -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Marca / Descripción -->
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-xl font-extrabold tracking-tight">Pharmacy</span>
+          <span class="text-sm px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300">App</span>
+        </div>
+        <p class="mt-3 text-sm/6 text-slate-300">
+          Gestión integral de medicamentos, inventario, ventas y reportes.
+        </p>
+      </div>
+
+      <!-- Catálogo -->
+      <nav aria-label="Catálogo">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-300">Catálogo</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a [routerLink]="['/medications']" class="footer-link">Medicamentos</a></li>
+          <li><a [routerLink]="['/categories']" class="footer-link">Categorías</a></li>
+          <li><a [routerLink]="['/providers']" class="footer-link">Proveedores</a></li>
+        </ul>
+      </nav>
+
+      <!-- Operación -->
+      <nav aria-label="Operación">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-300">Operación</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a [routerLink]="['/sales']" class="footer-link">Ventas</a></li>
+          <li><a [routerLink]="['/sales-detail']" class="footer-link">Detalles de venta</a></li>
+          <li><a [routerLink]="['/payments']" class="footer-link">Pagos</a></li>
+          <li><a [routerLink]="['/recipes']" class="footer-link">Recetas</a></li>
+        </ul>
+      </nav>
+
+      <!-- Almacén y Reportes -->
+      <nav aria-label="Almacén y reportes">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-300">Almacén y Reportes</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a [routerLink]="['/inventory']" class="footer-link">Inventario</a></li>
+          <li><a [routerLink]="['/lots']" class="footer-link">Lotes</a></li>
+          <li><a [routerLink]="['/expirations']" class="footer-link">Caducidad</a></li>
+          <li><a [routerLink]="['/sales-summary']" class="footer-link">Resumen de ventas</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Línea divisoria -->
+    <div class="mt-8 border-t border-slate-700/60"></div>
+
+    <!-- Contacto / Redes -->
+    <div class="mt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div class="flex items-center gap-4 text-sm text-slate-300">
+        <span class="inline-flex items-center gap-2"><i class="pi pi-envelope"></i> diramirez@uniguajira.edu.co</span>
+        <span class="inline-flex items-center gap-2"><i class="pi pi-phone"></i> +57 301 792 7338</span>
+      </div>
+      <div class="flex items-center gap-3 text-lg">
+        <a href="#" aria-label="GitHub" class="footer-icon"><i class="pi pi-github"></i></a>
+        <a href="#" aria-label="Facebook" class="footer-icon"><i class="pi pi-facebook"></i></a>
+        <a href="#" aria-label="WhatsApp" class="footer-icon"><i class="pi pi-whatsapp"></i></a>
+        <a href="#" aria-label="Ir arriba" class="footer-icon"><i class="pi pi-arrow-up"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra inferior -->
+  <div class="bg-slate-950/40 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-xs text-slate-400 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+      <p>© {{ year }} Pharmacy. Todos los derechos reservados.</p>
+      <p class="opacity-80">Hecho con <span aria-hidden="true">❤️</span> para gestionar tu farmacia.</p>
+    </div>
+  </div>
+</footer>

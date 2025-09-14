@@ -1,0 +1,27 @@
+/* Fondo con suave gradiente oscuro que combina con el header */
+.footer-gradient {
+  background: linear-gradient(180deg, #0f1428 0%, #191d33 100%);
+}
+
+/* Enlaces del footer */
+.footer-link {
+  color: rgb(203 213 225); /* slate-300 */
+  text-decoration: none;
+  transition: color .2s ease, transform .2s ease;
+}
+.footer-link:hover {
+  color: white;
+  transform: translateX(2px);
+}
+
+/* Iconos sociales */
+.footer-icon {
+  color: rgb(203 213 225);
+  opacity: .9;
+  transition: opacity .2s ease, transform .2s ease;
+  text-decoration: none;
+}
+.footer-icon:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}

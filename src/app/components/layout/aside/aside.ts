@@ -23,7 +23,7 @@ export class Aside implements OnInit {
             label: 'Medicamentos',
             icon: 'pi pi-medkit',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/medications/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/medications' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/medications/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/medications/create' }
             ]
@@ -32,7 +32,7 @@ export class Aside implements OnInit {
             label: 'Categorías',
             icon: 'pi pi-tags',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/categories/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/categories' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/categories/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/categories/create' }
             ]
@@ -41,7 +41,7 @@ export class Aside implements OnInit {
             label: 'Lotes',
             icon: 'pi pi-box',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/lots/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/lots' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/lots/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/lots/create' }
             ]
@@ -50,7 +50,7 @@ export class Aside implements OnInit {
             label: 'Proveedores',
             icon: 'pi pi-truck',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/providers/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/providers' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/providers/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/providers/create' }
             ]
@@ -65,7 +65,7 @@ export class Aside implements OnInit {
             label: 'Listado de Clientes',
             icon: 'pi pi-user',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/customers/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/customers' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/customers/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/customers/create' }
             ]
@@ -74,7 +74,7 @@ export class Aside implements OnInit {
             label: 'Recetas',
             icon: 'pi pi-file',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/recipes/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/recipes' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/recipes/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/recipes/create' }
             ]
@@ -89,7 +89,7 @@ export class Aside implements OnInit {
             label: 'Nueva Venta',
             icon: 'pi pi-plus-circle',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/sales/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/sales' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/sales/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/sales/create' }
             ]
@@ -98,7 +98,7 @@ export class Aside implements OnInit {
             label: 'Detalle de Ventas',
             icon: 'pi pi-list',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/sales-detail/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/sales-detail' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/sales-detail/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/sales-detail/create' }
             ]
@@ -113,7 +113,7 @@ export class Aside implements OnInit {
             label: 'Pagos',
             icon: 'pi pi-credit-card',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/payments/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/payments' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/payments/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/payments/create' }
             ]
@@ -122,7 +122,7 @@ export class Aside implements OnInit {
             label: 'Impuestos',
             icon: 'pi pi-percentage',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/taxes/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/taxes' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/taxes/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/taxes/create' }
             ]
@@ -137,7 +137,7 @@ export class Aside implements OnInit {
             label: 'Inventario por Lotes',
             icon: 'pi pi-database',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/inventory/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/inventory' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/inventory/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/inventory/create' }
             ]
@@ -146,7 +146,7 @@ export class Aside implements OnInit {
             label: 'Vencimientos',
             icon: 'pi pi-calendar-times',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/expirations/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/expirations' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/expirations/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/expirations/create' }
             ]
@@ -155,7 +155,7 @@ export class Aside implements OnInit {
             label: 'Resumen de Ventas',
             icon: 'pi pi-receipt',
             items: [
-              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/sales-summary/show' },
+              { label: 'Ver', icon: 'pi pi-eye', routerLink: '/sales-summary' },
               { label: 'Actualizar', icon: 'pi pi-refresh', routerLink: '/sales-summary/update' },
               { label: 'Crear', icon: 'pi pi-plus', routerLink: '/sales-summary/create' }
             ]

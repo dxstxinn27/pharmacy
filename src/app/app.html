@@ -1,16 +1,13 @@
-<main>
-    <header>
-        <app-header></app-header>
-    </header>
+<main class="min-h-screen flex flex-col">
+  <header class="shrink-0 border border-[#191d33]">
+    <app-header></app-header>
+  </header>
 
+  <section class="flex-1 border border-[#191d33]">
+    <router-outlet></router-outlet>
+  </section>
 
-    <section>
-        <router-outlet></router-outlet>
-    </section>
-
-
-    <footer>
-        <app-footer></app-footer>
-    </footer>
-
+  <footer class="mt-auto border border-[#191d33]">
+    <app-footer></app-footer>
+  </footer>
 </main>
